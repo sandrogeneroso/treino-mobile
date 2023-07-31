@@ -5,77 +5,97 @@
    background-repeat: no-repeat;
    background-position: center;
    display: inline-block;
-   
-   }
-   
-   .cabeçalho {
+
+}
+
+.cabeçalho {
    background-color: var(--branco);
    display: flex;
    justify-content: space-between;
    align-items: center;
    position: relative;
-   }
-   
-   .container {
+}
+
+.container {
    display: flex;
    align-items: center;
-   }
-   
-   .container__imagem {
+}
+
+.container__imagem {
    padding: 1em;
-   }
-   
-   .lista-menu {
+}
+
+.lista-menu {
    display: none;
    position: absolute;
    top: 100%;
    width: 60vw;
-   }
-   
-   .container__botao:checked~.lista-menu {
+}
+
+.container__botao:checked~.lista-menu {
    display: block;
-   }
-   
-   .lista__menu,
-   .lista__menu-titulo{
+}
+
+.lista__menu,
+.lista__menu-titulo{
    padding: 1em;
    background-color: var(--branco);
-   }
-   
-   .lista__menu-titulo {
+}
+
+.lista__menu-titulo {
    color: var(--laranja);
    font-weight: 700;
-   }
-   
-   .lista-menu__link{
+}
+
+.lista-menu__link{
    background: var(--azul-degrade);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    background-clip: text;
-   }
-   
-   .container__botao {
+   text-transform: uppercase;
+}
+
+.container__botao {
    display: none;
-   }
-   
-   .container__titulo {
+}
+
+.container__titulo{
    display: none;
-   }
-   
-   @media screen and (min-width:1024px) {
+}
+
+.opções {
+   display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
    .container__titulo,
+   .container__titulo--negrito {
+       font-family: var(--fonte-secundario);
+       font-size: 30px;
+   }  
+
+   .container__titulo {
+       font-weight: 400;
+       display: block;
+   }
+
    .container__titulo--negrito{
-   font-family: var(--fonte-secundaria);
-   font-size: 30px;
+       font-weight: 700;
    }
-   
-   .container__titulo{
-   font-weight: 400;
-   display: block;
+
+   .opções {
+       display: flex;
    }
-   
-   .container__titulo--negrito{
-   font-weight: 700;
+
+   .opções__item {
+       padding: 0 1em;
+       text-transform: uppercase;
    }
+
+   .opções__link{
+       text-decoration: none;
+       color: var(--preto);
    }
-   
+
+}
